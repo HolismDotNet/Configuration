@@ -1,3 +1,6 @@
+using Holism.Configuration.Models;
+using Holism.DataAccess;
+
 namespace Holism.Configuration.DataAccess
 {
     public class Repository
