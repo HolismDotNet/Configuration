@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Holism.Blog.DataAccess.Migrations
+namespace Holism.Configuration.DataAccess.Migrations
 {
     public partial class Init : Migration
     {

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace Holism.Blog.DataAccess.Migrations
+namespace Holism.Configuration.DataAccess.Migrations
 {
     [DbContext(typeof(ConfigurationContext))]
     [Migration("20210707114119_Init")]

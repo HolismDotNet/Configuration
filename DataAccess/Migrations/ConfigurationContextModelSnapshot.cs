@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace Holism.Blog.DataAccess.Migrations
+namespace Holism.Configuration.DataAccess.Migrations
 {
     [DbContext(typeof(ConfigurationContext))]
     partial class ConfigurationContextModelSnapshot : ModelSnapshot
