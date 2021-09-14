@@ -1,6 +1,6 @@
 ﻿using Holism.Business;
 using Holism.DataAccess;
-using Holism.Framework;
+using Holism.Infra;
 using Holism.Configuration.DataAccess;
 using Holism.Configuration.Models;
 using Microsoft.VisualBasic;
@@ -29,19 +29,19 @@ namespace Holism.Configuration.Business
         //     var configurationItem = GetOrNull(i => i.Namespace == @namespace && i.Name == name);
         //     if (configurationItem.IsNull())
         //     {
-        //         throw new FrameworkException($"Configuration item {@namespace}-{name} is not present in database.");
+        //         throw new ServerException($"Configuration item {@namespace}-{name} is not present in database.");
         //     }
         //     return configurationItem.CurrentValue;
         // }
 
         // protected override void BeforeCreation(ConfigurationItem model, object extraParameters = null)
         // {
-        //     throw new FrameworkException("Creation of configuration items is not permitted");
+        //     throw new ServerException("Creation of configuration items is not permitted");
         // }
 
         // protected override void BeforeDeletion(ConfigurationItem model)
         // {
-        //     throw new FrameworkException("Deletion of configuration items is not permitted");
+        //     throw new ServerException("Deletion of configuration items is not permitted");
         // }
 
         // public static List<ConfigurationItem> GetPublicConfigurations()
