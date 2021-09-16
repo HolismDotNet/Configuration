@@ -1,8 +1,8 @@
 namespace Holism.Configuration.Models
 {
-    public class Option : Holism.Models.IEntity
+    public class SystemConfig : Holism.Models.IEntity
     {
-        public Option()
+        public SystemConfig()
         {
             RelatedItems = new System.Dynamic.ExpandoObject();
         }
@@ -11,7 +11,9 @@ namespace Holism.Configuration.Models
 
         public string Fqn { get; set; }
 
-        public string Value { get; set; }
+        public long TypeId { get; set; }
+
+        public string CurrentValue { get; set; }
 
         public dynamic RelatedItems { get; set; }
     }

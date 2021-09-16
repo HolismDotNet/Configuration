@@ -1,7 +1,7 @@
-using Holism.DataAccess;
-using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using Holism.Configuration.Models;
+using Holism.DataAccess;
+using Microsoft.EntityFrameworkCore;
 
 namespace Holism.Configuration.DataAccess
 {
@@ -9,14 +9,15 @@ namespace Holism.Configuration.DataAccess
     {
         public override string ConnectionStringName => "Configuration";
 
-        public DbSet<ConfigurationItem> ConfigurationItems { get; set; }
-        public DbSet<Option> Options {get; set;}
+        public DbSet<Option> Options { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        public DbSet<SystemConfig> SystemConfigs { get; set; }
+
+        public DbSet<UserConfig> UserConfigs { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
         {
-			modelBuilder.Entity<ConfigurationItem>().Property(i => i.Id).ValueGeneratedNever();
-			modelBuilder.Entity<Option>().Property(i => i.Id).ValueGeneratedNever();
-            base.OnModelCreating(modelBuilder);
+            base.OnModelCreating(builder);
         }
     }
 }

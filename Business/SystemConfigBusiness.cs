@@ -12,12 +12,12 @@ using MoreLinq;
 
 namespace Holism.Configuration.Business
 {
-    public class OptionBusiness : Business<Option, Option>
+    public class SystemConfigBusiness : Business<SystemConfig, SystemConfig>
     {
-        protected override Repository<Option> WriteRepository =>
-            Repository.Option;
+        protected override Repository<SystemConfig> WriteRepository =>
+            Repository.SystemConfig;
 
-        protected override ReadRepository<Option> ReadRepository =>
-            Repository.Option;
+        protected override ReadRepository<SystemConfig> ReadRepository =>
+            Repository.SystemConfig;
     }
 }

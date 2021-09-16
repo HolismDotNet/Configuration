@@ -1,0 +1,98 @@
+{
+    "name": "Configuration",
+    "tables": [
+        {
+            "name": "Types",
+            "isEnum": true,
+            "enumItems": [
+                {
+                    "key": "Text",
+                    "value": 1
+                },
+                {
+                    "key": "Integer",
+                    "value": 2
+                },
+                {
+                    "key": "PositiveInteger",
+                    "value": 3
+                },
+                {
+                    "key": "Decimal",
+                    "value": 4
+                },
+                {
+                    "key": "Boolean",
+                    "value": 5
+                },
+                {
+                    "key": "NullableBoolean",
+                    "value": 6
+                },
+                {
+                    "key": "Color",
+                    "value": 7
+                },
+                {
+                    "key": "SingleChoice",
+                    "value": 8
+                },
+                {
+                    "key": "MultipleChoice",
+                    "value": 9
+                }
+            ]
+        },
+        {
+            "name": "Options",
+            "columns": [
+                {
+                    "name": "Fqn"
+                },
+                {
+                    "name": "Value"
+                }
+            ]
+        },
+        {
+            "name": "SystemConfigs",
+            "columns": [
+                {
+                    "name": "Fqn",
+                    "isUnique": true
+                },
+                {
+                    "name": "TypeId"
+                },
+                {
+                    "name": "CurrentValue"
+                }
+            ]
+        },
+        {
+            "name": "UserConfigs",
+            "columns": [
+                {
+                    "name": "UserGuid"
+                },
+                {
+                    "name": "Fqn"
+                },
+                {
+                    "name": "TypeId"
+                },
+                {
+                    "name": "CurrentValue"
+                }
+            ],
+            "uniqueIndexes": [
+                {
+                    "columns": [
+                        "UserGuid",
+                        "Fqn"
+                    ]
+                }
+            ]
+        }
+    ]
+}
