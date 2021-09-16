@@ -86,12 +86,13 @@
                     "name": "CurrentValue"
                 }
             ],
-            "uniqueIndexes": [
+            "indexes": [
                 {
                     "columns": [
                         "UserGuid",
                         "Fqn"
-                    ]
+                    ],
+                    "isUnique": true
                 }
             ]
         }
