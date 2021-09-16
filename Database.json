@@ -47,7 +47,8 @@
             "name": "Options",
             "columns": [
                 {
-                    "name": "Fqn"
+                    "name": "Fqn",
+                    "hasIndex": true
                 },
                 {
                     "name": "Value"
