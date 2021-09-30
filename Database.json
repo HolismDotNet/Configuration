@@ -95,6 +95,58 @@
                     "isUnique": true
                 }
             ]
+        },
+        {
+            "name": "EntityTypeConfigs",
+            "columns": [
+                {
+                    "name": "EntityTypeGuid"
+                },
+                {
+                    "name": "Fqn"
+                },
+                {
+                    "name": "TypeId"
+                },
+                {
+                    "name": "CurrentValue"
+                }
+            ],
+            "indexes": [
+                {
+                    "columns": [
+                        "EntityTypeGuid",
+                        "Fqn"
+                    ],
+                    "isUnique": true
+                }
+            ]
+        },
+        {
+            "name": "EntityConfigs",
+            "columns": [
+                {
+                    "name": "EntityGuid"
+                },
+                {
+                    "name": "Fqn"
+                },
+                {
+                    "name": "TypeId"
+                },
+                {
+                    "name": "CurrentValue"
+                }
+            ],
+            "indexes": [
+                {
+                    "columns": [
+                        "EntityGuid",
+                        "Fqn"
+                    ],
+                    "isUnique": true
+                }
+            ]
         }
     ]
 }
