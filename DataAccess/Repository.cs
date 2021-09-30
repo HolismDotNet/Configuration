@@ -31,5 +31,23 @@ namespace Holism.Configuration.DataAccess
                 >(new ConfigurationContext());
             }
         }
+
+        public static Repository<EntityTypeConfig> EntityTypeConfig
+        {
+            get
+            {
+                return new Holism.DataAccess.Repository<EntityTypeConfig
+                >(new ConfigurationContext());
+            }
+        }
+
+        public static Repository<EntityConfig> EntityConfig
+        {
+            get
+            {
+                return new Holism.DataAccess.Repository<EntityConfig
+                >(new ConfigurationContext());
+            }
+        }
     }
 }

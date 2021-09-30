@@ -15,6 +15,10 @@ namespace Holism.Configuration.DataAccess
 
         public DbSet<UserConfig> UserConfigs { get; set; }
 
+        public DbSet<EntityTypeConfig> EntityTypeConfigs { get; set; }
+
+        public DbSet<EntityConfig> EntityConfigs { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
