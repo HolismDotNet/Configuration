@@ -19,5 +19,13 @@ namespace Holism.Configuration.Business
 
         protected override ReadRepository<SystemConfigView> ReadRepository =>
             Repository.SystemConfigView;
+
+        public SystemConfigView SetValue(long id, object value)
+        {
+            var systemConfig = WriteRepository.Get(id);
+            systemConfig.CurrentValue = value.ToString();
+            Update(systemConfig);
+            return Get(id);
+        }
     }
 }
