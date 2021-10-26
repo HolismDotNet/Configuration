@@ -181,6 +181,24 @@
                 "inner join Types",
                 "on ConfigItems.TypeId = Types.Id"
             ]
+        },
+        {
+            "name": "UserConfigViews",
+            "query": [
+                "select",
+                "    UserConfigs.Id,",
+                "    UserConfigs.UserGuid,",
+                "    UserConfigs.ConfigItemId,",
+                "    UserConfigs.CurrentValue,",
+                "    ConfigItems.[Name] as ConfigItemName,",
+                "    ConfigItems.TypeId,",
+                "    Types.[Key] as TypeKey",
+                "from UserConfigs",
+                "inner join ConfigItems",
+                "on UserConfigs.ConfigItemId = ConfigItems.Id",
+                "inner join Types",
+                "on ConfigItems.TypeId = Types.Id"
+            ]
         }
     ]
 }
