@@ -149,6 +149,19 @@
     ],
     "views": [
         {
+            "name": "ConfigItemViews",
+            "query": [
+                "select",
+                "    ConfigItems.Id,",
+                "    ConfigItems.[Name],",
+                "    ConfigItems.TypeId,",
+                "    Types.[Key] as TypeKey",
+                "from ConfigItems",
+                "inner join Types ",
+                "on ConfigItems.TypeId = Types.Id"
+            ]
+        },
+        {
             "name": "SystemConfigViews",
             "query": [
                 "select",
