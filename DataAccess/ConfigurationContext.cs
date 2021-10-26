@@ -9,6 +9,8 @@ namespace Holism.Configuration.DataAccess
     {
         public override string ConnectionStringName => "Configuration";
 
+        public DbSet<ConfigItem> ConfigItems { get; set; }
+
         public DbSet<Option> Options { get; set; }
 
         public DbSet<SystemConfig> SystemConfigs { get; set; }
@@ -18,6 +20,8 @@ namespace Holism.Configuration.DataAccess
         public DbSet<EntityTypeConfig> EntityTypeConfigs { get; set; }
 
         public DbSet<EntityConfig> EntityConfigs { get; set; }
+
+        public DbSet<SystemConfigView> SystemConfigViews { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

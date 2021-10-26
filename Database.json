@@ -44,11 +44,22 @@
             ]
         },
         {
+            "name": "ConfigItems",
+            "columns": [
+                {
+                    "name": "Name",
+                    "isUnique": true
+                },
+                {
+                    "name": "TypeId"
+                }
+            ]
+        },
+        {
             "name": "Options",
             "columns": [
                 {
-                    "name": "Fqn",
-                    "hasIndex": true
+                    "name": "ConfigItemId"
                 },
                 {
                     "name": "Value"
@@ -59,11 +70,7 @@
             "name": "SystemConfigs",
             "columns": [
                 {
-                    "name": "Fqn",
-                    "isUnique": true
-                },
-                {
-                    "name": "TypeId"
+                    "name": "ConfigItemId"
                 },
                 {
                     "name": "CurrentValue"
@@ -77,10 +84,7 @@
                     "name": "UserGuid"
                 },
                 {
-                    "name": "Fqn"
-                },
-                {
-                    "name": "TypeId"
+                    "name": "ConfigItemId"
                 },
                 {
                     "name": "CurrentValue"
@@ -90,7 +94,7 @@
                 {
                     "columns": [
                         "UserGuid",
-                        "Fqn"
+                        "ConfigItemId"
                     ],
                     "isUnique": true
                 }
@@ -103,10 +107,7 @@
                     "name": "EntityTypeGuid"
                 },
                 {
-                    "name": "Fqn"
-                },
-                {
-                    "name": "TypeId"
+                    "name": "ConfigItemId"
                 },
                 {
                     "name": "CurrentValue"
@@ -116,7 +117,7 @@
                 {
                     "columns": [
                         "EntityTypeGuid",
-                        "Fqn"
+                        "ConfigItemId"
                     ],
                     "isUnique": true
                 }
@@ -129,10 +130,7 @@
                     "name": "EntityGuid"
                 },
                 {
-                    "name": "Fqn"
-                },
-                {
-                    "name": "TypeId"
+                    "name": "ConfigItemId"
                 },
                 {
                     "name": "CurrentValue"
@@ -142,10 +140,29 @@
                 {
                     "columns": [
                         "EntityGuid",
-                        "Fqn"
+                        "ConfigItemId"
                     ],
                     "isUnique": true
                 }
+            ]
+        }
+    ],
+    "views": [
+        {
+            "name": "SystemConfigViews",
+            "query": [
+                "select",
+                "    SystemConfigs.Id,",
+                "    SystemConfigs.ConfigItemId,",
+                "    SystemConfigs.CurrentValue,",
+                "    ConfigItems.[Name] as ConfigItemName,",
+                "    ConfigItems.TypeId,",
+                "    Types.[Key] as TypeKey",
+                "from SystemConfigs",
+                "inner join ConfigItems",
+                "on SystemConfigs.ConfigItemId = ConfigItems.Id",
+                "inner join Types",
+                "on ConfigItems.TypeId = Types.Id"
             ]
         }
     ]

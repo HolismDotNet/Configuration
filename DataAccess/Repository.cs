@@ -5,6 +5,15 @@ namespace Holism.Configuration.DataAccess
 {
     public class Repository
     {
+        public static Repository<ConfigItem> ConfigItem
+        {
+            get
+            {
+                return new Holism.DataAccess.Repository<ConfigItem
+                >(new ConfigurationContext());
+            }
+        }
+
         public static Repository<Option> Option
         {
             get
@@ -46,6 +55,15 @@ namespace Holism.Configuration.DataAccess
             get
             {
                 return new Holism.DataAccess.Repository<EntityConfig
+                >(new ConfigurationContext());
+            }
+        }
+
+        public static Repository<SystemConfigView> SystemConfigView
+        {
+            get
+            {
+                return new Holism.DataAccess.Repository<SystemConfigView
                 >(new ConfigurationContext());
             }
         }

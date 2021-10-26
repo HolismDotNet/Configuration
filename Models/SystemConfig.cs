@@ -9,9 +9,7 @@ namespace Holism.Configuration.Models
 
         public long Id { get; set; }
 
-        public string Fqn { get; set; }
-
-        public long TypeId { get; set; }
+        public long ConfigItemId { get; set; }
 
         public string CurrentValue { get; set; }
 
