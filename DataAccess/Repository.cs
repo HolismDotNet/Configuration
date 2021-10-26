@@ -59,20 +59,20 @@ namespace Holism.Configuration.DataAccess
             }
         }
 
-        public static Repository<ConfigItemView> ConfigItemView
-        {
-            get
-            {
-                return new Holism.DataAccess.Repository<ConfigItemView
-                >(new ConfigurationContext());
-            }
-        }
-
         public static Repository<SystemConfigView> SystemConfigView
         {
             get
             {
                 return new Holism.DataAccess.Repository<SystemConfigView
+                >(new ConfigurationContext());
+            }
+        }
+
+        public static Repository<ConfigItemView> ConfigItemView
+        {
+            get
+            {
+                return new Holism.DataAccess.Repository<ConfigItemView
                 >(new ConfigurationContext());
             }
         }

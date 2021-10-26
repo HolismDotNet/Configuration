@@ -73,7 +73,8 @@
                     "name": "ConfigItemId"
                 },
                 {
-                    "name": "CurrentValue"
+                    "name": "CurrentValue",
+                    "isNullable": true
                 }
             ]
         },
@@ -87,7 +88,8 @@
                     "name": "ConfigItemId"
                 },
                 {
-                    "name": "CurrentValue"
+                    "name": "CurrentValue",
+                    "isNullable": true
                 }
             ],
             "indexes": [
@@ -110,7 +112,8 @@
                     "name": "ConfigItemId"
                 },
                 {
-                    "name": "CurrentValue"
+                    "name": "CurrentValue",
+                    "isNullable": true
                 }
             ],
             "indexes": [
@@ -133,7 +136,8 @@
                     "name": "ConfigItemId"
                 },
                 {
-                    "name": "CurrentValue"
+                    "name": "CurrentValue",
+                    "isNullable": true
                 }
             ],
             "indexes": [

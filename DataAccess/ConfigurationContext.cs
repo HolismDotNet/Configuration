@@ -21,9 +21,9 @@ namespace Holism.Configuration.DataAccess
 
         public DbSet<EntityConfig> EntityConfigs { get; set; }
 
-        public DbSet<ConfigItemView> ConfigItemViews { get; set; }
-
         public DbSet<SystemConfigView> SystemConfigViews { get; set; }
+
+        public DbSet<ConfigItemView> ConfigItemViews { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
