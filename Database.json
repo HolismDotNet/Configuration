@@ -79,6 +79,15 @@
             ]
         },
         {
+            "name": "UserConfigItems",
+            "columns": [
+                {
+                    "name": "ConfigItemId",
+                    "isUnique": true
+                }
+            ]
+        },
+        {
             "name": "UserConfigs",
             "columns": [
                 {

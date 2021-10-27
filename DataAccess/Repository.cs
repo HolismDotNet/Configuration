@@ -32,6 +32,15 @@ namespace Holism.Configuration.DataAccess
             }
         }
 
+        public static Repository<UserConfigItem> UserConfigItem
+        {
+            get
+            {
+                return new Holism.DataAccess.Repository<UserConfigItem
+                >(new ConfigurationContext());
+            }
+        }
+
         public static Repository<UserConfig> UserConfig
         {
             get

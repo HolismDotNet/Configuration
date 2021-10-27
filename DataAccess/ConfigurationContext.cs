@@ -15,6 +15,8 @@ namespace Holism.Configuration.DataAccess
 
         public DbSet<SystemConfig> SystemConfigs { get; set; }
 
+        public DbSet<UserConfigItem> UserConfigItems { get; set; }
+
         public DbSet<UserConfig> UserConfigs { get; set; }
 
         public DbSet<EntityTypeConfig> EntityTypeConfigs { get; set; }
