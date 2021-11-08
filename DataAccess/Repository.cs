@@ -59,6 +59,15 @@ namespace Holism.Configuration.DataAccess
             }
         }
 
+        public static Repository<EntityConfigItem> EntityConfigItem
+        {
+            get
+            {
+                return new Holism.DataAccess.Repository<EntityConfigItem
+                >(new ConfigurationContext());
+            }
+        }
+
         public static Repository<EntityConfig> EntityConfig
         {
             get
@@ -91,6 +100,24 @@ namespace Holism.Configuration.DataAccess
             get
             {
                 return new Holism.DataAccess.Repository<UserConfigView
+                >(new ConfigurationContext());
+            }
+        }
+
+        public static Repository<EntityConfigView> EntityConfigView
+        {
+            get
+            {
+                return new Holism.DataAccess.Repository<EntityConfigView
+                >(new ConfigurationContext());
+            }
+        }
+
+        public static Repository<EntityConfigItemView> EntityConfigItemView
+        {
+            get
+            {
+                return new Holism.DataAccess.Repository<EntityConfigItemView
                 >(new ConfigurationContext());
             }
         }
