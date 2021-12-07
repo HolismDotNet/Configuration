@@ -23,6 +23,7 @@ namespace Holism.Configuration.UserApi
         [HttpPost]
         public IActionResult SetValue(long id, object value)
         {
+            // todo: ensure config belongs to the user
             new UserConfigBusiness().SetValue(id, value, UserGuid);
             return OkJson();
         }
