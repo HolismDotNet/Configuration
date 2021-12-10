@@ -37,6 +37,7 @@ namespace Holism.Configuration.DataAccess
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            
             base.OnModelCreating(builder);
         }
     }
