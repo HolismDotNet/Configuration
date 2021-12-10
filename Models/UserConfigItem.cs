@@ -1,16 +1,15 @@
-namespace Holism.Configuration.Models
+namespace Holism.Configuration.Models;
+
+public class UserConfigItem : IEntity
 {
-    public class UserConfigItem : Holism.Models.IEntity
+    public UserConfigItem()
     {
-        public UserConfigItem()
-        {
-            RelatedItems = new System.Dynamic.ExpandoObject();
-        }
-
-        public long Id { get; set; }
-
-        public long ConfigItemId { get; set; }
-
-        public dynamic RelatedItems { get; set; }
+        RelatedItems = new ExpandoObject();
     }
+
+    public long Id { get; set; }
+
+    public long ConfigItemId { get; set; }
+
+    public dynamic RelatedItems { get; set; }
 }
