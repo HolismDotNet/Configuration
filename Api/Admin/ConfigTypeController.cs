@@ -6,8 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Holism.Configuration.AdminApi
 {
-    public class ConfigTypeController : EnumController<Type>
+    public class ConfigTypeController : EnumController<Models.Type>
     {
-        public override EnumBusiness<Type> EnumBusiness => new TypeBusiness();
+        public override EnumBusiness<Models.Type> EnumBusiness => new TypeBusiness();
     }
 }
