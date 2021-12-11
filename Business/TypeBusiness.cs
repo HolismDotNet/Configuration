@@ -1,12 +1,9 @@
-using Holism.Business;
 using Holism.Configuration.DataAccess;
 using Holism.Configuration.Models;
 
-namespace Holism.Configuration.Business
+namespace Holism.Configuration.Business;
+
+public class TypeBusiness : EnumBusiness<Models.Type>
 {
-    public class TypeBusiness : EnumBusiness<Type>
-    {
-        public override string ConnectionString =>
-            Repository.ConfigItem.ConnectionString;
-    }
+    public override string ConnectionString => Repository.ConfigItem.ConnectionString;
 }
