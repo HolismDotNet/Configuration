@@ -32,7 +32,9 @@ public class Repository
         {
             return new Repository<EntityConfigItemView>(new ConfigurationContext());
         }
-    }    public static Repository<EntityConfig> EntityConfig
+    }
+
+    public static Repository<EntityConfig> EntityConfig
     {
         get
         {
@@ -103,6 +105,4 @@ public class Repository
             return new Repository<UserConfigView>(new ConfigurationContext());
         }
     }
-
-
 }

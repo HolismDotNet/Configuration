@@ -190,7 +190,7 @@
                 "    ConfigItems.TypeId,",
                 "    Types.`Key` as TypeKey",
                 "from ConfigItems",
-                "inner join Types ",
+                "inner join Types",
                 "on ConfigItems.TypeId = Types.Id"
             ]
         },
