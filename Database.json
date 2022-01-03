@@ -2,7 +2,7 @@
     "name": "Configuration",
     "tables": [
         {
-            "name": "Types",
+            "name": "ConfigTypes",
             "isEnum": true,
             "enumItems": [
                 {
@@ -185,13 +185,13 @@
             "name": "ConfigItemViews",
             "query": [
                 "select",
-                "    ConfigItems.Id,",
-                "    ConfigItems.Name,",
-                "    ConfigItems.TypeId,",
-                "    Types.`Key` as TypeKey",
-                "from ConfigItems",
-                "inner join Types",
-                "on ConfigItems.TypeId = Types.Id"
+                "    ci.Id,",
+                "    ci.Name,",
+                "    ci.TypeId,",
+                "    ct.`Key` as TypeKey",
+                "from ConfigItems ci",
+                "inner join ConfigTypes ct",
+                "on ci.TypeId = ct.Id"
             ]
         },
         {
