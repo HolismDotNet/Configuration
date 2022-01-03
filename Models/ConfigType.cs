@@ -1,6 +1,6 @@
 namespace Holism.Configuration.Models
 {
-    public enum Type
+    public enum ConfigType
     {
         Unknwon = 0,
         Text = 1,
