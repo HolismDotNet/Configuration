@@ -1,6 +1,6 @@
 namespace Holism.Configuration.AdminApi;
 
-public class ConfigTypeController : EnumController<Models.Type>
+public class ConfigTypeController : EnumController<ConfigType>
 {
-    public override EnumBusiness<Models.Type> EnumBusiness => new Configuration.Business.TypeBusiness();
+    public override EnumBusiness<ConfigType> EnumBusiness => new ConfigTypeBusiness();
 }
