@@ -51,7 +51,7 @@
                     "isUnique": true
                 },
                 {
-                    "name": "TypeId"
+                    "name": "ConfigTypeId"
                 }
             ]
         },
@@ -187,73 +187,73 @@
                 "select",
                 "    ci.Id,",
                 "    ci.Name,",
-                "    ci.TypeId,",
+                "    ci.ConfigTypeId,",
                 "    ct.`Key` as TypeKey",
                 "from ConfigItems ci",
                 "inner join ConfigTypes ct",
-                "on ci.TypeId = ct.Id"
+                "on ci.ConfigTypeId = ct.Id"
             ]
         },
         {
             "name": "SystemConfigViews",
             "query": [
                 "select",
-                "    SystemConfigs.Id,",
-                "    SystemConfigs.ConfigItemId,",
-                "    SystemConfigs.CurrentValue,",
-                "    ConfigItemViews.Name as ConfigItemName,",
-                "    ConfigItemViews.TypeId,",
-                "    ConfigItemViews.TypeKey",
-                "from SystemConfigs",
-                "inner join ConfigItemViews",
-                "on SystemConfigs.ConfigItemId = ConfigItemViews.Id"
+                "    sc.Id,",
+                "    sc.ConfigItemId,",
+                "    sc.CurrentValue,",
+                "    civ.Name as ConfigItemName,",
+                "    civ.ConfigTypeId,",
+                "    civ.TypeKey",
+                "from SystemConfigs sc",
+                "inner join ConfigItemViews civ",
+                "on sc.ConfigItemId = civ.Id"
             ]
         },
         {
             "name": "UserConfigViews",
             "query": [
                 "select",
-                "    UserConfigs.Id,",
-                "    UserConfigs.UserGuid,",
-                "    UserConfigs.ConfigItemId,",
-                "    UserConfigs.CurrentValue,",
-                "    ConfigItemViews.Name as ConfigItemName,",
-                "    ConfigItemViews.TypeId,",
-                "    ConfigItemViews.TypeKey",
-                "from UserConfigs",
-                "inner join ConfigItemViews",
-                "on UserConfigs.ConfigItemId = ConfigItemViews.Id"
+                "    uc.Id,",
+                "    uc.UserGuid,",
+                "    uc.ConfigItemId,",
+                "    uc.CurrentValue,",
+                "    civ.Name as ConfigItemName,",
+                "    civ.ConfigTypeId,",
+                "    civ.TypeKey",
+                "from UserConfigs uc",
+                "inner join ConfigItemViews civ",
+                "on uc.ConfigItemId = civ.Id"
             ]
         },
         {
             "name": "EntityConfigViews",
             "query": [
                 "select",
-                "    EntityConfigs.Id,",
-                "    EntityConfigs.EntityGuid,",
-                "    EntityConfigs.ConfigItemId,",
-                "    EntityConfigs.CurrentValue,",
-                "    ConfigItemViews.Name as ConfigItemName,",
-                "    ConfigItemViews.TypeId,",
-                "    ConfigItemViews.TypeKey",
-                "from EntityConfigs",
-                "inner join ConfigItemViews",
-                "on EntityConfigs.ConfigItemId = ConfigItemViews.Id"
+                "    ec.Id,",
+                "    ec.EntityGuid,",
+                "    ec.ConfigItemId,",
+                "    ec.CurrentValue,",
+                "    civ.Name as ConfigItemName,",
+                "    civ.ConfigTypeId,",
+                "    civ.TypeKey",
+                "from EntityConfigs ec",
+                "inner join ConfigItemViews civ",
+                "on ec.ConfigItemId = civ.Id"
             ]
         },
         {
             "name": "EntityConfigItemViews",
             "query": [
                 "select",
-                "    EntityConfigItems.Id,",
-                "    EntityConfigItems.EntityTypeGuid,",
-                "    EntityConfigItems.ConfigItemId,",
-                "    ConfigItemViews.Name as ConfigItemName,",
-                "    ConfigItemViews.TypeId,",
-                "    ConfigItemViews.TypeKey",
-                "from EntityConfigItems",
-                "inner join ConfigItemViews",
-                "on EntityConfigItems.ConfigItemId = ConfigItemViews.Id"
+                "    eci.Id,",
+                "    eci.EntityTypeGuid,",
+                "    eci.ConfigItemId,",
+                "    civ.Name as ConfigItemName,",
+                "    civ.ConfigTypeId,",
+                "    civ.TypeKey",
+                "from EntityConfigItems eci",
+                "inner join ConfigItemViews civ",
+                "on eci.ConfigItemId = civ.Id"
             ]
         }
     ]
