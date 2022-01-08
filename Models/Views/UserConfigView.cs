@@ -17,7 +17,7 @@ public class UserConfigView : IEntity
 
     public string ConfigItemName { get; set; }
 
-    public long TypeId { get; set; }
+    public long ConfigTypeId { get; set; }
 
     public string TypeKey { get; set; }
 

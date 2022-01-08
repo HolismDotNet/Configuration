@@ -11,7 +11,7 @@ public class ConfigItem : IEntity
 
     public string Name { get; set; }
 
-    public long TypeId { get; set; }
+    public long ConfigTypeId { get; set; }
 
     public dynamic RelatedItems { get; set; }
 }

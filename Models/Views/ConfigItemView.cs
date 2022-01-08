@@ -11,7 +11,7 @@ public class ConfigItemView : IEntity
 
     public string Name { get; set; }
 
-    public long TypeId { get; set; }
+    public long ConfigTypeId { get; set; }
 
     public string TypeKey { get; set; }
 
