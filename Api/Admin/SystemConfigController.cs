@@ -1,4 +1,4 @@
-namespace Holism.Configuration.AdminApi;
+namespace Configuration;
 
 public class SystemConfigController : Controller<SystemConfigView, SystemConfig>
 {

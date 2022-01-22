@@ -1,4 +1,4 @@
-namespace Holism.Configuration.UserApi;
+namespace Configuration;
 
 public class UserConfigController : ReadController<UserConfigView>
 {

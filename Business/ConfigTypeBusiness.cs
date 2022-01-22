@@ -1,7 +1,4 @@
-
-
-
-namespace Holism.Configuration.Business;
+namespace Configuration;
 
 public class ConfigTypeBusiness : EnumBusiness<ConfigType>
 {

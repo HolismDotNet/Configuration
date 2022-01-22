@@ -1,23 +1,10 @@
+namespace Configuration;
 
-
-
-
-
-
-
-
-
-
-
-
-namespace Holism.Configuration.Business
+public class UserConfigItemBusiness : Business<UserConfigItem, UserConfigItem>
 {
-    public class UserConfigItemBusiness : Business<UserConfigItem, UserConfigItem>
-    {
-        protected override Repository<UserConfigItem> WriteRepository =>
-            Repository.UserConfigItem;
+    protected override Repository<UserConfigItem> WriteRepository =>
+        Repository.UserConfigItem;
 
-        protected override ReadRepository<UserConfigItem> ReadRepository =>
-            Repository.UserConfigItem;
-    }
+    protected override ReadRepository<UserConfigItem> ReadRepository =>
+        Repository.UserConfigItem;
 }
