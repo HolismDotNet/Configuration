@@ -1,4 +1,4 @@
-namespace Holism.Configuration.Models;
+namespace Configuration;
 
 public class EntityTypeConfig : IEntity
 {

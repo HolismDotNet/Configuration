@@ -1,4 +1,4 @@
-namespace Holism.Configuration.DataAccess;
+namespace Configuration;
 
 public class ConfigurationContext : DatabaseContext
 {
