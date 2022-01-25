@@ -4,31 +4,31 @@ public class ConfigurationContext : DatabaseContext
 {
     public override string ConnectionStringName => "Configuration";
 
-    public DbSet<ConfigItem> ConfigItems { get; set; }
+    public DbSet<Configuration.ConfigItem> ConfigItems { get; set; }
 
-    public DbSet<ConfigItemView> ConfigItemViews { get; set; }
+    public DbSet<Configuration.ConfigItemView> ConfigItemViews { get; set; }
 
-    public DbSet<EntityConfigItem> EntityConfigItems { get; set; }
+    public DbSet<Configuration.EntityConfigItem> EntityConfigItems { get; set; }
 
-    public DbSet<EntityConfigItemView> EntityConfigItemViews { get; set; }
+    public DbSet<Configuration.EntityConfigItemView> EntityConfigItemViews { get; set; }
 
-    public DbSet<EntityConfig> EntityConfigs { get; set; }
+    public DbSet<Configuration.EntityConfig> EntityConfigs { get; set; }
 
-    public DbSet<EntityConfigView> EntityConfigViews { get; set; }
+    public DbSet<Configuration.EntityConfigView> EntityConfigViews { get; set; }
 
-    public DbSet<EntityTypeConfig> EntityTypeConfigs { get; set; }
+    public DbSet<Configuration.EntityTypeConfig> EntityTypeConfigs { get; set; }
 
-    public DbSet<Option> Options { get; set; }
+    public DbSet<Configuration.Option> Options { get; set; }
 
-    public DbSet<SystemConfig> SystemConfigs { get; set; }
+    public DbSet<Configuration.SystemConfig> SystemConfigs { get; set; }
 
-    public DbSet<SystemConfigView> SystemConfigViews { get; set; }
+    public DbSet<Configuration.SystemConfigView> SystemConfigViews { get; set; }
 
-    public DbSet<UserConfigItem> UserConfigItems { get; set; }
+    public DbSet<Configuration.UserConfigItem> UserConfigItems { get; set; }
 
-    public DbSet<UserConfig> UserConfigs { get; set; }
+    public DbSet<Configuration.UserConfig> UserConfigs { get; set; }
 
-    public DbSet<UserConfigView> UserConfigViews { get; set; }
+    public DbSet<Configuration.UserConfigView> UserConfigViews { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
