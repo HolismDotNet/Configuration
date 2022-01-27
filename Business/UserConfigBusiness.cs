@@ -2,11 +2,9 @@ namespace Configuration;
 
 public class UserConfigBusiness : Business<UserConfigView, UserConfig>
 {
-    protected override Repository<UserConfig> WriteRepository =>
-        Repository.UserConfig;
+    protected override Repository<UserConfig> WriteRepository => RepositoryUserConfig;
 
-    protected override ReadRepository<UserConfigView> ReadRepository =>
-        Repository.UserConfigView;
+    protected override ReadRepository<UserConfigView> ReadRepository => RepositoryUserConfigView;
 
     public override ListResult<UserConfigView> GetList(ListParameters listParameters)
     {

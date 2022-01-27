@@ -2,11 +2,9 @@
 
 public class SystemConfigBusiness : Business<SystemConfigView, SystemConfig>
 {
-    protected override Repository<SystemConfig> WriteRepository =>
-        Repository.SystemConfig;
+    protected override Repository<SystemConfig> WriteRepository => RepositorySystemConfig;
 
-    protected override ReadRepository<SystemConfigView> ReadRepository =>
-        Repository.SystemConfigView;
+    protected override ReadRepository<SystemConfigView> ReadRepository => RepositorySystemConfigView;
 
     public SystemConfigView SetValue(long id, object value)
     {
