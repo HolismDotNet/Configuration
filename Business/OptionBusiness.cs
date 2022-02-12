@@ -2,7 +2,7 @@
 
 public class OptionBusiness : Business<Option, Option>
 {
-    protected override Repository<Option> WriteRepository => Repository.Option;
+    protected override Write<Option> Write => Repository.Option;
 
-    protected override ReadRepository<Option> ReadRepository => Repository.Option;
+    protected override Read<Option> Read => Repository.Option;
 }

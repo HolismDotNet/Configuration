@@ -2,7 +2,7 @@ namespace Configuration;
 
 public class ConfigItemBusiness : Business<ConfigItemView, ConfigItem>
 {
-    protected override Repository<ConfigItem> WriteRepository => Repository.ConfigItem;
+    protected override Write<ConfigItem> Write => Repository.ConfigItem;
 
-    protected override ReadRepository<ConfigItemView> ReadRepository => Repository.ConfigItemView;
+    protected override Read<ConfigItemView> Read => Repository.ConfigItemView;
 }

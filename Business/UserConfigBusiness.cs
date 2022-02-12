@@ -2,9 +2,9 @@ namespace Configuration;
 
 public class UserConfigBusiness : Business<UserConfigView, UserConfig>
 {
-    protected override Repository<UserConfig> WriteRepository => Repository.UserConfig;
+    protected override Write<UserConfig> Write => Repository.UserConfig;
 
-    protected override ReadRepository<UserConfigView> ReadRepository => Repository.UserConfigView;
+    protected override Read<UserConfigView> Read => Repository.UserConfigView;
 
     public override ListResult<UserConfigView> GetList(ListParameters listParameters)
     {
@@ -32,18 +32,18 @@ public class UserConfigBusiness : Business<UserConfigView, UserConfig>
             ConfigItemId = i,
             UserGuid = userGuid
         }).ToList();
-        WriteRepository.BulkInsert(newUserConfigs);
+        Write.BulkInsert(newUserConfigs);
 
         var userConfigsToBeDeleted = userConfigs
         .Where(i => userConfigItemIdsToBeDeleted.Contains(i.ConfigItemId))
         .Select(i => i.CastTo<UserConfig>())
         .ToList();
-        WriteRepository.BulkDelete(userConfigsToBeDeleted);
+        Write.BulkDelete(userConfigsToBeDeleted);
     }
 
     public UserConfigView SetValue(long id, object value, Guid userGuid)
     {
-        var userConfig = WriteRepository.Get(id);
+        var userConfig = Write.Get(id);
         if (userConfig.UserGuid != userGuid) 
         {
             throw new ClientException("Configuration item does not belong to the user");
