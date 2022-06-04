@@ -48,7 +48,7 @@
             "columns": [
                 {
                     "name": "Name",
-                    "isUnique": true
+                    "unique": true
                 },
                 {
                     "name": "ConfigTypeId"
@@ -83,7 +83,7 @@
             "columns": [
                 {
                     "name": "ConfigItemId",
-                    "isUnique": true
+                    "unique": true
                 }
             ]
         },
@@ -107,7 +107,7 @@
                         "UserGuid",
                         "ConfigItemId"
                     ],
-                    "isUnique": true
+                    "unique": true
                 }
             ]
         },
@@ -131,7 +131,7 @@
                         "EntityTypeGuid",
                         "ConfigItemId"
                     ],
-                    "isUnique": true
+                    "unique": true
                 }
             ]
         },
@@ -151,7 +151,7 @@
                         "EntityTypeGuid",
                         "ConfigItemId"
                     ],
-                    "isUnique": true
+                    "unique": true
                 }
             ]
         },
@@ -175,7 +175,7 @@
                         "EntityGuid",
                         "ConfigItemId"
                     ],
-                    "isUnique": true
+                    "unique": true
                 }
             ]
         }
