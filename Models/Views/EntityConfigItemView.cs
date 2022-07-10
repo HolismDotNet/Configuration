@@ -13,6 +13,8 @@ public class EntityConfigItemView : IEntity
 
     public long ConfigItemId { get; set; }
 
+    public string ConfigItemKey { get; set; }
+
     public string ConfigItemName { get; set; }
 
     public long ConfigTypeId { get; set; }

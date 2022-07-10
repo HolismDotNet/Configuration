@@ -13,6 +13,8 @@ public class SystemConfigView : IEntity
 
     public string CurrentValue { get; set; }
 
+    public string ConfigItemKey { get; set; }
+
     public string ConfigItemName { get; set; }
 
     public long ConfigTypeId { get; set; }

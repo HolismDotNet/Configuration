@@ -1,6 +1,6 @@
 namespace Configuration;
 
-public class ConfigItemView : IEntity
+public class ConfigItemView : IEntity, IKey
 {
     public ConfigItemView()
     {
@@ -9,7 +9,11 @@ public class ConfigItemView : IEntity
 
     public long Id { get; set; }
 
+    public string Key { get; set; }
+
     public string Name { get; set; }
+
+    public string Description { get; set; }
 
     public long ConfigTypeId { get; set; }
 

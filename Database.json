@@ -14,11 +14,11 @@
                     "value": 2
                 },
                 {
-                    "key": "PositiveInteger",
+                    "key": "NaturalNumber",
                     "value": 3
                 },
                 {
-                    "key": "Decimal",
+                    "key": "RealNumber",
                     "value": 4
                 },
                 {
@@ -45,13 +45,18 @@
         },
         {
             "name": "ConfigItems",
+            "hasKey": true,
             "columns": [
                 {
-                    "name": "Name",
-                    "unique": true
+                    "name": "ConfigTypeId"
                 },
                 {
-                    "name": "ConfigTypeId"
+                    "name": "Name",
+                    "nullable": true
+                },
+                {
+                    "name": "Description",
+                    "nullable": true
                 }
             ]
         },
@@ -186,7 +191,9 @@
             "query": [
                 "select",
                 "    ci.Id,",
+                "    ci.Key,",
                 "    ci.Name,",
+                "    ci.Description,",
                 "    ci.ConfigTypeId,",
                 "    ct.`Key` as TypeKey",
                 "from ConfigItems ci",
@@ -201,6 +208,7 @@
                 "    sc.Id,",
                 "    sc.ConfigItemId,",
                 "    sc.CurrentValue,",
+                "    civ.Key as ConfigItemKey,",
                 "    civ.Name as ConfigItemName,",
                 "    civ.ConfigTypeId,",
                 "    civ.TypeKey",
@@ -217,6 +225,7 @@
                 "    uc.UserGuid,",
                 "    uc.ConfigItemId,",
                 "    uc.CurrentValue,",
+                "    civ.Key as ConfigItemKey,",
                 "    civ.Name as ConfigItemName,",
                 "    civ.ConfigTypeId,",
                 "    civ.TypeKey",
@@ -233,6 +242,7 @@
                 "    ec.EntityGuid,",
                 "    ec.ConfigItemId,",
                 "    ec.CurrentValue,",
+                "    civ.Key as ConfigItemKey,",
                 "    civ.Name as ConfigItemName,",
                 "    civ.ConfigTypeId,",
                 "    civ.TypeKey",
@@ -248,6 +258,7 @@
                 "    eci.Id,",
                 "    eci.EntityTypeGuid,",
                 "    eci.ConfigItemId,",
+                "    civ.Key as ConfigItemKey,",
                 "    civ.Name as ConfigItemName,",
                 "    civ.ConfigTypeId,",
                 "    civ.TypeKey",
