@@ -10,11 +10,11 @@
                     "value": 1
                 },
                 {
-                    "key": "Integer",
+                    "key": "NaturalNumber",
                     "value": 2
                 },
                 {
-                    "key": "NaturalNumber",
+                    "key": "Integer",
                     "value": 3
                 },
                 {

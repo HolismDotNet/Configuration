@@ -4,8 +4,8 @@ public enum ConfigType
 {
     Unknwon = 0,
     Text = 1,
-    Integer = 2,
-    NaturalNumber = 3,
+    NaturalNumber = 2,
+    Integer = 3,
     RealNumber = 4,
     Boolean = 5,
     NullableBoolean = 6,
