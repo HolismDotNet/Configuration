@@ -58,6 +58,14 @@ public class Repository
         }
     }
 
+    public static Write<Configuration.EntityTypeConfigView> EntityTypeConfigView
+    {
+        get
+        {
+            return new Write<Configuration.EntityTypeConfigView>(new ConfigurationContext());
+        }
+    }
+
     public static Write<Configuration.Option> Option
     {
         get

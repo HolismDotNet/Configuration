@@ -235,6 +235,23 @@
             ]
         },
         {
+            "name": "EntityTypeConfigViews",
+            "query": [
+                "select",
+                "    etc.Id,",
+                "    etc.EntityTypeGuid,",
+                "    etc.ConfigItemId,",
+                "    etc.CurrentValue,",
+                "    civ.Key as ConfigItemKey,",
+                "    civ.Name as ConfigItemName,",
+                "    civ.ConfigTypeId,",
+                "    civ.TypeKey",
+                "from EntityTypeConfigs etc",
+                "inner join ConfigItemViews civ",
+                "on etc.ConfigItemId = civ.Id"
+            ]
+        },
+        {
             "name": "EntityConfigViews",
             "query": [
                 "select",

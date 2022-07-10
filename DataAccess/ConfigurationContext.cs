@@ -18,6 +18,8 @@ public class ConfigurationContext : DatabaseContext
 
     public DbSet<Configuration.EntityTypeConfig> EntityTypeConfigs { get; set; }
 
+    public DbSet<Configuration.EntityTypeConfigView> EntityTypeConfigViews { get; set; }
+
     public DbSet<Configuration.Option> Options { get; set; }
 
     public DbSet<Configuration.SystemConfig> SystemConfigs { get; set; }
