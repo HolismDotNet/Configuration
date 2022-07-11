@@ -40,6 +40,10 @@
                 {
                     "key": "MultipleChoice",
                     "value": 9
+                },
+                {
+                    "key": "Percent",
+                    "value": 10
                 }
             ]
         },

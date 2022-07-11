@@ -11,5 +11,6 @@ public enum ConfigType
     NullableBoolean = 6,
     Color = 7,
     SingleChoice = 8,
-    MultipleChoice = 9
+    MultipleChoice = 9,
+    Percent = 10
 }
