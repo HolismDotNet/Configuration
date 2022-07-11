@@ -7,9 +7,14 @@ public class SystemConfigController : Controller<SystemConfigView, SystemConfig>
     public override Business<SystemConfigView, SystemConfig> Business => new SystemConfigBusiness();
 
     [HttpPost]
-    public IActionResult SetValue(long id, object value)
+    public SystemConfigView SetValue(long id)
     {
-        new SystemConfigBusiness().SetValue(id, value);
-        return OkJson();
+        var value = Request.Query["value"];
+        if (value.Count == 0)
+        {
+            throw new ClientException("Value is not provided");
+        }
+        var systemConfig = new SystemConfigBusiness().SetValue(id, value.First());
+        return systemConfig;
     }
 }
