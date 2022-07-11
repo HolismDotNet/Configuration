@@ -279,11 +279,14 @@
                 "    eci.Id,",
                 "    eci.EntityTypeGuid,",
                 "    eci.ConfigItemId,",
+                "    et.Name as EntityTypeName,",
                 "    civ.Key as ConfigItemKey,",
                 "    civ.Name as ConfigItemName,",
                 "    civ.ConfigTypeId,",
                 "    civ.TypeKey",
                 "from EntityConfigItems eci",
+                "inner join Entities.EntityTypes et",
+                "on eci.EntityTypeGuid = et.Guid",
                 "inner join ConfigItemViews civ",
                 "on eci.ConfigItemId = civ.Id"
             ]
