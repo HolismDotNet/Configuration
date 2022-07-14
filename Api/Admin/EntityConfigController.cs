@@ -12,4 +12,19 @@ public class EntityConfigController : Controller<EntityConfigView, EntityConfig>
         var configs = new EntityConfigBusiness().GetConfigs(entityType, entityGuid);
         return configs;
     }
+
+    [HttpPost]
+    public List<EntityConfigView> Save(string entityType, Guid entityGuid)
+    {
+        var newConfigs = new Dictionary<long, object>();
+        var storedConfigs = new EntityConfigBusiness().GetConfigs(entityType, entityGuid);
+
+        foreach (var item in storedConfigs)
+        {
+            newConfigs.Add(item.ConfigItemId, HttpContext.ExtractProperty(item.ConfigItemId.ToString()));
+        }
+        new EntityConfigBusiness().SaveConfigs(entityType, entityGuid, newConfigs);
+        storedConfigs = new EntityConfigBusiness().GetConfigs(entityType, entityGuid);
+        return storedConfigs;
+    }
 }

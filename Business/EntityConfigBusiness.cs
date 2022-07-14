@@ -24,4 +24,28 @@ public class EntityConfigBusiness : Business<EntityConfigView, EntityConfig>
         currentConfigs = currentConfigs.OrderBy(i => i.ConfigItemId).ToList();
         return currentConfigs;
     }
+
+    public void SaveConfigs(string entityType, Guid entityGuid, Dictionary<long, object> newConfigs)
+    {
+        var existingConfigs = GetList(i => i.EntityGuid == entityGuid);
+        foreach (var newConfig in newConfigs)
+        {
+            var value = newConfig.Value == null ? "" : newConfig.Value.ToString();
+            var existingConfig = existingConfigs.FirstOrDefault(i => i.ConfigItemId == newConfig.Key);
+            if (existingConfig == null)
+            {
+                Create(new EntityConfig
+                {
+                    ConfigItemId = newConfig.Key,
+                    CurrentValue = value,
+                    EntityGuid = entityGuid
+                });
+            }
+            else 
+            {
+                existingConfig.CurrentValue = value;
+                Update(existingConfig.CastTo<EntityConfig>());
+            }
+        }
+    }
 }
