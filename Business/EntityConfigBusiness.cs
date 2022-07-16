@@ -27,6 +27,17 @@ public class EntityConfigBusiness : Business<EntityConfigView, EntityConfig>
         return currentConfigs;
     }
 
+    public object GetConfigsObject(string entityType, Guid entityGuid)
+    {
+        var configs = GetConfigs(entityType, entityGuid);
+        dynamic @object = new ExpandoObject();
+        foreach (var config in configs)
+        {
+            ExpandoObjectExtensions.AddProperty(@object, config.ConfigItemKey, config.RelatedItems.TypedValue);
+        }
+        return @object;
+    }
+
     private void SetTypedValues(List<EntityConfigView> configs)
     {
         foreach (var config in configs)
