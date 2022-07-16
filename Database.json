@@ -146,6 +146,7 @@
         },
         {
             "name": "EntityConfigItems",
+            "hasOrder": true,
             "columns": [
                 {
                     "name": "EntityTypeGuid"
@@ -279,6 +280,7 @@
                 "    eci.Id,",
                 "    eci.EntityTypeGuid,",
                 "    eci.ConfigItemId,",
+                "    eci.Order,",
                 "    et.Name as EntityTypeName,",
                 "    civ.Key as ConfigItemKey,",
                 "    civ.Name as ConfigItemName,",

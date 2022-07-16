@@ -1,6 +1,6 @@
 namespace Configuration;
 
-public class EntityConfigItemView : IEntity
+public class EntityConfigItemView : IEntity, IOrder
 {
     public EntityConfigItemView()
     {
@@ -12,6 +12,8 @@ public class EntityConfigItemView : IEntity
     public Guid EntityTypeGuid { get; set; }
 
     public long ConfigItemId { get; set; }
+
+    public long Order { get; set; }
 
     public string EntityTypeName { get; set; }
 

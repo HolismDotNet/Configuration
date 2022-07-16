@@ -1,6 +1,6 @@
 namespace Configuration;
 
-public class EntityConfigItem : IEntity
+public class EntityConfigItem : IEntity, IOrder
 {
     public EntityConfigItem()
     {
@@ -12,6 +12,8 @@ public class EntityConfigItem : IEntity
     public Guid EntityTypeGuid { get; set; }
 
     public long ConfigItemId { get; set; }
+
+    public long Order { get; set; }
 
     public dynamic RelatedItems { get; set; }
 }
